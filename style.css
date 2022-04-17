@@ -1,0 +1,354 @@
+@font-face {
+	font-family: Raleway-Regular;
+	src: url("raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+	font-family: Roboto-Regular;
+	src: url("roboto/Roboto-Regular.ttf");
+}
+
+:root {
+	--primary-colour: rgb(255, 180, 0);
+	--primary-colour-lighter: rgba(255, 220, 60);
+	--primary-colour-darker: rgba(215, 140, 0);
+}
+
+.input {
+	display: block;
+	border: solid rgb(80, 80, 80);
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	outline: none;
+}
+
+.button {
+	color: white;
+	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+	border: none;
+	padding: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	cursor: pointer;
+}
+
+.back-button {
+	background-color: rgb(0, 150, 255);
+	border-radius: 100px;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	font-size: 2em;
+	box-shadow: 0 0 20px rgb(0, 150, 255);
+	cursor: pointer;
+}
+
+.back-button:hover {
+	background-color: rgb(40, 190, 255);
+}
+
+.back-button:active {
+	background-color: rgb(0, 100, 185);
+}
+
+.title {
+	font-family: Raleway-Regular;
+	font-size: 3em;
+}
+
+.title, .centred-text {
+	text-align: center;
+}
+
+.title, h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+.subtitle {
+	font-family: Raleway-Regular;
+	text-align: center;
+	font-size: 2em;
+}
+
+.account-button {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	background: rgba(255, 150, 0);
+	border-radius: 5px;
+	color: black;
+	padding: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	box-shadow: 0 0 10px rgba(255, 150, 0);
+}
+
+.account-button:hover {
+	background: rgba(255, 180, 30);
+}
+
+.account-button:active {
+	background: rgba(225, 120, 0);
+}
+
+.play-button {
+	position: fixed;
+	left: calc(50% - 125px);
+	bottom: 50px;
+}
+
+.play-button, .login-button {
+	background: rgb(0, 100, 0);
+	border-radius: 5px;
+	width: 250px;
+	height: 100px;
+	font-size: 2.5em;
+	box-shadow: 0 0 20px rgb(0, 100, 0);
+}
+
+.play-button:hover, .login-button:hover {
+	background: rgb(0, 120, 0);
+}
+
+.play-button:active, .login-button:active {
+	background: rgb(0, 80, 0);
+}
+
+.play-button:disabled, .login-button:disabled {
+	background: rgb(80, 80, 80);
+}
+
+.login-button {
+	width: 350px;
+	display: block;
+	font-size: 2em;
+}
+
+.login-box {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+
+.login-box .button {
+	margin-bottom: 10px;
+}
+
+.login-box .input {
+	font-size: 1.3em;
+	background: rgb(0, 0, 0);
+	border: solid rgb(40, 40, 40);
+	border-radius: 5px;
+	width: 350px;
+	height: 30px;
+	margin-bottom: 30px;
+	padding: 5px;
+}
+
+.label {
+	display: block;
+	font-size: 1.5em;
+}
+
+.discord-widget {
+	position: fixed;
+	top: 150px;
+	left: calc(50% - 175px);
+}
+
+a:link {
+	color: var(--primary-colour);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:link:hover, a:link:focus, a:link:active {
+	color: white;
+	text-decoration: underline;
+}
+
+.tabs {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+}
+
+.tabs button {
+	display: inline;
+	background: none;
+	border: none;
+	height: 100%;
+	color: white;
+	transition: background 0.2s;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.tabs button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.selected-tab {
+	text-decoration: underline;
+}
+
+.tabs button:active {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabs .sep {
+	display: inline-block;
+	width: 1px;
+	height: 15px;
+	position: relative;
+	top: 3px;
+	background-color: white;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.about-text {
+	margin-left: 30px;
+}
+
+.error-message {
+	font-size: 1.5em;
+	color: rgb(255, 85, 85);
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	background-color: rgb(30, 30, 30);
+	color: white;
+	user-select: none;
+	margin: 0;
+}
+
+body, button, input {
+	font-family: Roboto-Regular;
+}
+
+.invisible {
+	display: none;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	height: 10px;
+	border-radius: 10px;
+	background: rgba(100, 100, 100);
+	cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+	background: var(--primary-colour);
+	transition: background 0.2s;
+	box-shadow: 0 0 5px var(--primary-colour);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	background: var(--primary-colour-lighter);
+}
+
+.memory-box {
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+
+.memory-box p {
+	text-align: center;
+}
+
+.memory-box input {
+	width: 100%;
+}
+
+.button-generic {
+	background: var(--primary-colour);
+	border-radius: 5px;
+	color: black;
+	box-shadow: 0 0 10px var(--primary-colour);
+}
+
+.button-generic:hover {
+	background: var(--primary-colour-lighter);
+}
+
+.button-generic:active {
+	background: var(--primary-colour-darker);
+}
+
+.spaced-15 {
+	margin-left: 15px;
+}
+
+.spaced-5 {
+	margin-left: 5px;
+}
+
+.centred {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.server {
+	cursor: pointer;
+}
+
+.server:not(:last-child) {
+	margin-right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+	transition: width 0.2s;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-colour);
+  border-radius: 10px;
+	transition: background 0.2s; /* FIXME: Super cool transition not working */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-colour-lighter);
+}
+
+#text1476 {
+	font-family: Raleway;
+}
+
+.settings {
+	overflow: auto;
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 350px);
+	background-color: rgb(20, 20, 20);
+}
+
+#launch-note {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 4px;
+}
